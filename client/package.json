@@ -1,5 +1,5 @@
 {
-  "name": "ecommerce",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,10 +12,5 @@
     "react": "latest",
     "react-dom": "latest",
     "next": "latest"
-  },
-  "devDependencies": {
-    "autoprefixer": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest"
   }
 }
