@@ -18,9 +18,10 @@ export function LoginForm() {
       onSubmit: async (formValue) => {
         try {
           const response = await authCtrl.login(formValue);
+          console.log(response)
         //   login(response.jwt);
   
-          // router.push("/");
+        //   router.push("/");
         } catch (error) {
           console.error(error);
         }
