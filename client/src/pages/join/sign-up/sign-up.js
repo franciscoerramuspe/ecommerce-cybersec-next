@@ -1,7 +1,7 @@
 import Link from "next/link"
 import styles from "./sign-up.module.scss"
 import { JoinLayout } from "@/layouts/JoinLayout/JoinLayout"
-import {RegisterForm} from "@/components/Auth";
+import { RegisterForm } from "@/components/Auth";
 
 function SignUpPage() {
   return (

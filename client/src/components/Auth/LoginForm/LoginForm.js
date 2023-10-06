@@ -47,7 +47,7 @@ export function LoginForm() {
       />
 
       <Form.Button type="submit" fluid loading={formik.isSubmitting}>
-        Entrar
+        Sign in
       </Form.Button>
     </Form>
   )
