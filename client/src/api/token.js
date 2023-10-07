@@ -19,6 +19,7 @@ export class Token {
     const expireDate = tokenDecode.exp * 1000;
     const currentDate = new Date().getTime();
 
+    // token has expired
     if (currentDate > expireDate) {
       return true;
     }
