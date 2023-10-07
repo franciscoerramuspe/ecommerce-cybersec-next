@@ -21,7 +21,7 @@ export function AuthProvider(props) {
         setLoading(false);
         return;
       }
-
+// recovers the session so the user doesn't have to login while the token hasn't expired
       if (tokenCtrl.hasExpired(token)) {
         logout();
       } else {
