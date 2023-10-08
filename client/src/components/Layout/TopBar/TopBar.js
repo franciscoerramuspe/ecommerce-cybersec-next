@@ -1,6 +1,6 @@
 import { Image } from "semantic-ui-react";
 import Link from "next/link";
-// import { Account } from "../Account";
+import { Account } from "../Account";
 // import { Menu } from "../Menu";
 import styles from "./TopBar.module.scss";
 
@@ -21,8 +21,7 @@ export function TopBar(props) {
       </div>
 
       <div className={styles.right}>
-        <span>Account</span>
-        {/* <Account /> */}
+        <Account />
       </div>
     </div>
   );
