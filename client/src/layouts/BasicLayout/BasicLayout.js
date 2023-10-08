@@ -20,8 +20,8 @@ export function BasicLayout(props) {
           {isContainer ? <Container>{children}</Container> : children}
         </div>
       </Container>
-{/* 
-      <Footer /> */}
+
+      <Footer />
     </>
   );
 }
