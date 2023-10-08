@@ -1,3 +1,7 @@
+$color: red;
+$width: 1px;
+
 .relative {
     padding-top: 100px;
-  }
+    border: $color $width;
+}
