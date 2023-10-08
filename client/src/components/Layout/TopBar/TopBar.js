@@ -1,7 +1,7 @@
 import { Image } from "semantic-ui-react";
 import Link from "next/link";
 import { Account } from "../Account";
-// import { Menu } from "../Menu";
+import { Menu } from "../Menu";
 import styles from "./TopBar.module.scss";
 
 export function TopBar(props) {
@@ -16,8 +16,7 @@ export function TopBar(props) {
       </div>
 
       <div className={styles.center}>
-        {/* <Menu isOpenSearch={isOpenSearch} /> */}
-        <span>Menu</span>
+        <Menu isOpenSearch={isOpenSearch} />
       </div>
 
       <div className={styles.right}>
