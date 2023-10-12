@@ -10,7 +10,7 @@ import { useAuth } from "@/hooks";
 //   Wishlist,
 //   Orders,
 // } from "@/components/Account";
-// import { Separator, Seo } from "@/components/Shared";
+import { Separator } from "@/components/Shared";
 import { Info, Settings } from "@/components/Account";
 import styles from "./account.module.scss";
 
@@ -35,7 +35,7 @@ export default function AccountPage() {
             My orders:
           </p>
           {/* <Orders /> */}
-          {/* <Separator height={80} /> */}
+          <Separator height={80} />
         </Tab.Pane>
       ),
     },
@@ -44,8 +44,8 @@ export default function AccountPage() {
       render: () => (
         <Tab.Pane attached={false}>
           <p>My Wishlist</p>
-          {/* <Wishlist />
-          <Separator height={80} /> */}
+          {/* {/* <Wishlist /> */}
+          <Separator height={80} />
         </Tab.Pane>
       ),
     },
@@ -53,9 +53,9 @@ export default function AccountPage() {
       menuItem: "Directions",
       render: () => (
         <Tab.Pane attached={false}>
-          {/* <Address.AddAddress onReload={onReload} />
-          <Address.ListAddresses reload={reload} onReload={onReload} />
-          <Separator height={80} /> */}
+          {/* {/* <Address.AddAddress onReload={onReload} />
+          <Address.ListAddresses reload={reload} onReload={onReload} /> */}
+          <Separator height={80} />
           <p>Directions</p>
         </Tab.Pane>
       ),
@@ -66,10 +66,10 @@ export default function AccountPage() {
         <Tab.Pane attached={false} key={99}>
           <Settings.ChangeNameForm />
           <div className={styles.containerForms}>
-            {/* <Settings.ChangeEmailForm />
-            <Settings.ChangePasswordForm /> */}
+            <Settings.ChangeEmailForm />
+            {/* // <Settings.ChangePasswordForm /> */}
           </div>
-          {/* <Separator height={80} /> */}
+          <Separator height={80} />
         </Tab.Pane>
       ),
     },
