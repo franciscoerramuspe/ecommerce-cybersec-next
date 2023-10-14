@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, Icon } from "semantic-ui-react";
 import { Address as AddressCtrl } from "@/api";
-// import { BasicModal, Confirm } from "@/components/Shared";
+import { BasicModal, Confirm } from "@/components/Shared";
 import { AddressForm } from "../../AddressForm";
 import styles from "./Address.module.scss";
 
@@ -31,7 +31,7 @@ export function Address(props) {
           <p className={styles.title}>{address.title}: </p>
           <p className={styles.addressInfo}>
             {address.name}, {address.address}, {address.state}, {address.city},{" "}
-            {address.postal_code}
+            {address.zip_code}
           </p>
         </div>
 
@@ -49,13 +49,13 @@ export function Address(props) {
         open={showConfirm}
         onCancel={openCloseConfirm}
         onConfirm={onDelete}
-        content="¿Estas seguro de que quieres eliminar la dirección?"
+        content="Are you sure that you want to eliminate this address?"
       />
 
       <BasicModal
         show={showEdit}
         onClose={openCloseEdit}
-        title="Editar dirección"
+        title="Edit address"
       >
         <AddressForm
           onClose={openCloseEdit}

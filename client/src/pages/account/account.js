@@ -54,7 +54,7 @@ export default function AccountPage() {
       render: () => (
         <Tab.Pane attached={false}>
           <Address.AddAddress onReload={onReload} />
-          {/* <Address.ListAddresses reload={reload} onReload={onReload} />  */}
+          <Address.ListAddresses reload={reload} onReload={onReload} />
           <Separator height={80} />
           <p>Addresses</p>
         </Tab.Pane>

@@ -30,6 +30,7 @@ export class Address {
 
     async getAll(userId) {
         try {
+            // filters all addresses by userID
             const filters = `filters[user][id][$eq]=${userId}`;
             const url = `${ENV.API_URL}/${ENV.ENDPOINTS.ADDRESS}?${filters}`;
 
