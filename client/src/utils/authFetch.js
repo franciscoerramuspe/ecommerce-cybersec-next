@@ -3,19 +3,17 @@ import { Token } from "@/api";
 export async function authFetch(url, params) {
   const tokenCtrl = new Token();
   const token = tokenCtrl.getToken();
-  
 
-//   const logout = () => {
-//     tokenCtrl.removeToken();
-//     window.location.replace("/");
-//   };
+  const logout = () => {
+    tokenCtrl.removeToken();
+    window.location.replace("/");
+  };
 
   if (!token) {
-    // logout();
+    logout();
   } else {
-    tokenCtrl.hasExpired(token);
     if (tokenCtrl.hasExpired(token)) {
-    //   logout();
+      logout();
     } else {
       const paramsTemp = {
         ...params,

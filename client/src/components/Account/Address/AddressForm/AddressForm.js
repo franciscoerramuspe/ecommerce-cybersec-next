@@ -16,14 +16,15 @@ export function AddressForm(props) {
     validateOnChange: false,
     onSubmit: async (formValue) => {
       try {
-        if (addressId) {
-          await addressCtrl.update(formValue, addressId);
-        } else {
-          await addressCtrl.create(formValue, user.id);
-        }
+        await addressCtrl.create(formValue, user.id);
+        // if (addressId) {
+        //   await addressCtrl.update(formValue, addressId);
+        // } else {
+        //   await addressCtrl.create(formValue, user.id);
+        // }
 
         formik.handleReset();
-        onReload();
+        // 
         onClose();
       } catch (error) {
         console.error(error);
@@ -77,11 +78,11 @@ export function AddressForm(props) {
 
       <Form.Group widths="equal">
         <Form.Input
-          name="postal_code"
+          name="zip_code"
           placeholder="ZIP Code"
-          value={formik.values.postal_code}
+          value={formik.values.zip_code}
           onChange={formik.handleChange}
-          error={formik.errors.postal_code}
+          error={formik.errors.zip_code}
         />
         <Form.Input
           name="phone"
