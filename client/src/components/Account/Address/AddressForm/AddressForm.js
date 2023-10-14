@@ -27,6 +27,7 @@ export function AddressForm(props) {
         }
 
         formik.handleReset();
+        onReload();
         onClose();
       } catch (error) {
         console.error(error);
