@@ -35,7 +35,7 @@ export function AddressForm(props) {
     <Form onSubmit={formik.handleSubmit}>
       <Form.Input
         name="title"
-        placeholder="Titulo de la dirección"
+        placeholder="Address Title"
         value={formik.values.title}
         onChange={formik.handleChange}
         error={formik.errors.title}
@@ -44,14 +44,14 @@ export function AddressForm(props) {
       <Form.Group widths="equal">
         <Form.Input
           name="name"
-          placeholder="Nombre y apellidos"
+          placeholder="First Name and Last Name"
           value={formik.values.name}
           onChange={formik.handleChange}
           error={formik.errors.name}
         />
         <Form.Input
           name="address"
-          placeholder="Dirección"
+          placeholder="Address"
           value={formik.values.address}
           onChange={formik.handleChange}
           error={formik.errors.address}
@@ -61,14 +61,14 @@ export function AddressForm(props) {
       <Form.Group widths="equal">
         <Form.Input
           name="state"
-          placeholder="Provincia"
+          placeholder="State"
           value={formik.values.state}
           onChange={formik.handleChange}
           error={formik.errors.state}
         />
         <Form.Input
           name="city"
-          placeholder="Ciudad"
+          placeholder="City"
           value={formik.values.city}
           onChange={formik.handleChange}
           error={formik.errors.city}
@@ -78,14 +78,14 @@ export function AddressForm(props) {
       <Form.Group widths="equal">
         <Form.Input
           name="postal_code"
-          placeholder="Codigo postal"
+          placeholder="ZIP Code"
           value={formik.values.postal_code}
           onChange={formik.handleChange}
           error={formik.errors.postal_code}
         />
         <Form.Input
           name="phone"
-          placeholder="Telefono"
+          placeholder="Phone"
           value={formik.values.phone}
           onChange={formik.handleChange}
           error={formik.errors.phone}
@@ -93,7 +93,7 @@ export function AddressForm(props) {
       </Form.Group>
 
       <Form.Button type="submit" fluid loading={formik.isSubmitting}>
-        Enviar
+        Submit
       </Form.Button>
     </Form>
   );

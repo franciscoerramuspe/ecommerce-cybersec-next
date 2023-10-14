@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "semantic-ui-react";
-// import { BasicModal } from "@/components/Shared";
+import { BasicModal } from "@/components/Shared";
 import { AddressForm } from "../AddressForm";
 import styles from "./AddAddress.module.scss";
 
@@ -13,10 +13,10 @@ export function AddAddress(props) {
   return (
     <>
       <Button primary className={styles.addBtn} onClick={onOpenClose}>
-        Crear
+        Create Address
       </Button>
 
-      <BasicModal show={show} onClose={onOpenClose} title="Nueva dirección">
+      <BasicModal show={show} onClose={onOpenClose} title="New address">
         <AddressForm onClose={onOpenClose} onReload={onReload} />
       </BasicModal>
     </>

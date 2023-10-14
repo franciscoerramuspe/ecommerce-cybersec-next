@@ -11,7 +11,7 @@ import { useAuth } from "@/hooks";
 //   Orders,
 // } from "@/components/Account";
 import { Separator } from "@/components/Shared";
-import { Info, Settings } from "@/components/Account";
+import { Info, Settings, Address } from "@/components/Account";
 import styles from "./account.module.scss";
 
 export default function AccountPage() {
@@ -50,13 +50,13 @@ export default function AccountPage() {
       ),
     },
     {
-      menuItem: "Directions",
+      menuItem: "Addresses",
       render: () => (
         <Tab.Pane attached={false}>
-          {/* {/* <Address.AddAddress onReload={onReload} />
-          <Address.ListAddresses reload={reload} onReload={onReload} /> */}
+          <Address.AddAddress onReload={onReload} />
+          {/* <Address.ListAddresses reload={reload} onReload={onReload} />  */}
           <Separator height={80} />
-          <p>Directions</p>
+          <p>Addresses</p>
         </Tab.Pane>
       ),
     },
