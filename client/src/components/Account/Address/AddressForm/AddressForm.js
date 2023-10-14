@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Form } from "semantic-ui-react";
 import { useFormik } from "formik";
 import { Address } from "@/api";
@@ -10,24 +11,26 @@ export function AddressForm(props) {
   const { onClose, onReload, addressId, address } = props;
   const { user } = useAuth();
 
+  // State for error messages
+  const [error, setError] = useState(null);
+
   const formik = useFormik({
     initialValues: initialValues(address),
     validationSchema: validationSchema(),
     validateOnChange: false,
     onSubmit: async (formValue) => {
       try {
-        await addressCtrl.create(formValue, user.id);
-        // if (addressId) {
-        //   await addressCtrl.update(formValue, addressId);
-        // } else {
-        //   await addressCtrl.create(formValue, user.id);
-        // }
+        if (addressId) {
+          await addressCtrl.update(formValue, addressId);
+        } else {
+          await addressCtrl.create(formValue, user.id);
+        }
 
         formik.handleReset();
-        // 
         onClose();
       } catch (error) {
         console.error(error);
+        setError("An error occurred while processing your request. Please try again.");
       }
     },
   });
@@ -92,6 +95,8 @@ export function AddressForm(props) {
           error={formik.errors.phone}
         />
       </Form.Group>
+
+      {error && <p style={{ color: 'red' }}>{error}</p>}
 
       <Form.Button type="submit" fluid loading={formik.isSubmitting}>
         Submit

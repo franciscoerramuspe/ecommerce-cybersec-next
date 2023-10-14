@@ -7,7 +7,7 @@ export function initialValues(address) {
     address: address?.address || "",
     city: address?.city || "",
     state: address?.state || "",
-    postal_code: address?.postal_code || "",
+    zip_code: address?.zip_code || "",
     phone: address?.phone || "",
   };
 }
@@ -19,7 +19,7 @@ export function validationSchema() {
     address: Yup.string().required(true),
     city: Yup.string().required(true),
     state: Yup.string().required(true),
-    postal_code: Yup.string().required(true),
+    zip_code: Yup.string().required(true),
     phone: Yup.number().required(true),
   });
 }
