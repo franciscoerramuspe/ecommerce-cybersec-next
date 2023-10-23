@@ -1,7 +1,7 @@
 import { BasicLayout } from "@/layouts"
 import { Container } from "semantic-ui-react"
 import { Home } from "@/components/Home"
-import { Separator } from "@/components/Shared"
+import { Separator, BarTrust } from "@/components/Shared"
 
 export default function HomePage() {
   return (
@@ -14,6 +14,10 @@ export default function HomePage() {
           <Home.LatestGames />
         </Container>
         
+        <Separator height={100} />
+
+        <BarTrust />
+
     </BasicLayout>
     </>
   )
