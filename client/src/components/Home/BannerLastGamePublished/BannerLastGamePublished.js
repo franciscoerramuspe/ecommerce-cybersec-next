@@ -31,6 +31,7 @@ export function BannerLastGamePublished() {
     game.attributes.price,
     game.attributes.discount
   );
+  console.log(game)
 
   return (
     <div className={styles.container}>
@@ -45,7 +46,7 @@ export function BannerLastGamePublished() {
           <h2>{game.attributes.title}</h2>
 
           <p className={styles.price}>
-            {/* <Label.Discount>-{game.attributes.discount}%</Label.Discount> */}
+            <Label.Discount>-{game.attributes.discount}%</Label.Discount>
             <span className={styles.finalPrice}>${price}</span>
           </p>
         </Container>
