@@ -8,9 +8,10 @@ import styles from "./playstation.module.scss";
 export default function PlayStationPage() {
   const [ps4Games, setPs4Games] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [playstationGames, setPlaystationGames] = useState([]);
 
 //   useEffect(() => {
-    // Function to fetch PS4 games data
+    // Function to fetch PS5 games data
 //     const fetchPS4Games = async () => {
 //       try {
 //         // Replace with actual API endpoint
@@ -36,6 +37,14 @@ export default function PlayStationPage() {
         </Tab.Pane>
       ),
     },
+    {
+        menuItem: "PS4 Games",
+      render: () => (
+        <Tab.Pane attached={false}>
+          <p>PS4 Games</p>
+        </Tab.Pane>
+      ),
+    }
     // You can add more panes if necessary, for other PlayStation categories
   ];
 
