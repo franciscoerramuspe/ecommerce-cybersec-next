@@ -1,4 +1,4 @@
-import { ENV } from "@/utils";
+import { ENV, authFetch } from "@/utils";
 
 export class Platform {
   async getAll() {
@@ -21,15 +21,18 @@ export class Platform {
 
   async getBySlug(slug) {
     try {
+      
       const filters = `filters[slug][$eq]=${slug}`;
+      
+    
       const url = `${ENV.API_URL}/${ENV.ENDPOINTS.PLATFORM}?${filters}`;
+      console.log(url);
+      // const response = await fetch(url);
+      // const result = await response.json();
 
-      const response = await fetch(url);
-      const result = await response.json();
+      // if (response.status !== 200) throw result;
 
-      if (response.status !== 200) throw result;
-
-      return result.data[0];
+      // return result.data[0];
     } catch (error) {
       throw error;
     }
