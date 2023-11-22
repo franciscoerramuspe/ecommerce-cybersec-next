@@ -11,11 +11,11 @@ export async function getServerSideProps(context) {
 const {query, params } = context;
 const {page = 1} = query;
 const {platform} = params;
-//   const platformCtrl = new Platform();
-//   const responsePlatform = await platformCtrl.getBySlug(platform);
+  const platformCtrl = new Platform();
+  const responsePlatform = await platformCtrl.getBySlug(platform);
 
-//   const gameCtrl = new Game();
-//   const responseGames = await gameCtrl.getGamesByPlatformSlug(platform, page);
+  const gameCtrl = new Game();
+  const responseGames = await gameCtrl.getGamesByPlatformSlug(platform, page);
 
   return {
     props: {

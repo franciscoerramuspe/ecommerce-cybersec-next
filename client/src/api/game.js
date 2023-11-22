@@ -86,17 +86,24 @@ export class Game {
       const filters = `filters[slug][$eq]=${slug}`;
       const populate = `populate[0]=wallpaper&populate[1]=cover&populate&populate[2]=screenshots&populate[3]=platform&populate[4]=platform.icon`;
       const url = `${ENV.API_URL}/${ENV.ENDPOINTS.GAME}?${filters}&${populate}`;
-
+  
+      console.log(`Requesting URL: ${url}`); // Log the request URL
+  
       const response = await fetch(url);
       const result = await response.json();
-
+  
+      console.log(`Response Status: ${response.status}`); // Log response status
+      console.log(`Response Data: `, result); // Log response data
+  
       if (response.status !== 200) throw result;
-
+  
       return result.data[0];
     } catch (error) {
+      console.error('Error in getBySlug:', error); // Log detailed error
       throw error;
     }
   }
+  
 
   async getGameById(id) {
     try {

@@ -39,10 +39,10 @@ export default function PlayStationPage() {
     },
     {
         menuItem: "PS4 Games",
-      render: () => (
-        <Tab.Pane attached={false}>
-          <p>PS4 Games</p>
-        </Tab.Pane>
+        render: () => (
+            <Tab.Pane attached={false}>
+                <p>PS4 Games</p>
+            </Tab.Pane>
       ),
     }
     // You can add more panes if necessary, for other PlayStation categories

@@ -7,6 +7,10 @@ import styles from "./GridGames.module.scss";
 export function GridGames(props) {
   const { games } = props;
 
+
+  const handleAddToCart = (game) => {
+    console.log(game);
+  }
   return (
     <div className={styles.gridGames}>
       {map(games, (game) => (
@@ -22,15 +26,23 @@ export function GridGames(props) {
                 {`-${game.attributes.discount}%`}
               </Label.Discount>
             )}
+            <button
+              className={styles.addToCartButton}
+              onClick={() => handleAddToCart(game)}
+            >
+              + Add to Cart
+            </button>
           </div>
-
+          
           <div>
+          
             <span>{game.attributes.title}</span>
             <span className={styles.price}>
               ${fn.calcDiscountedPrice(
                 game.attributes.price,
                 game.attributes.discount
               )}
+              
             </span>
           </div>
         </Link>

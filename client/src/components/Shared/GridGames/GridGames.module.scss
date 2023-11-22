@@ -4,6 +4,7 @@
     margin: -10px;
     margin-top: 20px;
   }
+
   
   .game {
     width: 33.33%;
@@ -36,6 +37,33 @@
   
       .price {
         font-size: 18px;
+      }
+    }
+    .addToCartButton {
+      position: absolute;
+      top: 10px; // Adjust as necessary to align with the design
+      right: 10px; // Adjust as necessary to align with the design
+      background: #ff5400; // Assuming you want to use the primary color
+      color: white;
+      cursor: pointer;
+      padding: 5px 10px; // Adjust padding to fit the content
+      border-radius: 15px; // This will give you rounded corners
+      border: 1px solid white; // Assuming you want a white border
+      font-size: 0.8em; // Adjust font size as necessary
+      z-index: 2; // Ensure it's above other elements
+    
+      // Optionally add a transition for the hover effect
+      transition: background-color 0.3s ease;
+    
+      // Hover effect
+      &:hover {
+        background-color: #ffa700; // Assuming you want to use the primary-hover color
+      }
+    
+      // Focus effect - optional, for accessibility
+      &:focus {
+        outline: none; // Remove the default outline
+        box-shadow: 0 0 0 2px #ff5400; // Add your own focus style
       }
     }
   }

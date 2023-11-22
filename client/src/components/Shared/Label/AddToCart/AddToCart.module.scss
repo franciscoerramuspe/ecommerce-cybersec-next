@@ -1,0 +1,29 @@
+// AddToCart.module.scss
+@import "~/src/scss/index.scss";
+
+.addToCartButton {
+    border: 2px solid red;
+//   font-weight: 700;
+//   background-color: $primary; // primary color for the button background
+//   color: $text-primary; // white color for the text
+//   position: absolute;
+//   border-radius: 8px; // rounded corners
+//   padding: 6px 12px; // padding inside the button
+//   z-index: 2;
+//   font-size: 13px;
+//   cursor: pointer; // change cursor to indicate clickable
+//   border: none; // remove default button border
+//   top: 10px; // position from the top within its relative parent
+//   right: 10px; // position from the right within its relative parent
+  
+  // hover effect
+  &:hover {
+    background-color: $primary-hover; // slightly different color on hover
+  }
+
+  // focus style
+  &:focus {
+    outline: none; // remove default focus outline
+    box-shadow: 0 0 0 2px $border-primary; // custom focus style
+  }
+}
