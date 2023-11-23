@@ -9,10 +9,10 @@ export async function getServerSideProps(context) {
 
   const gameCtrl = new Game();
   const response = await gameCtrl.getBySlug(game);
-
+  console.log(response);
   return {
     props: {
-      game: response,
+      game: null,
     },
   };
 }

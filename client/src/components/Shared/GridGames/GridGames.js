@@ -1,14 +1,22 @@
 import Link from "next/link";
-import { map } from "lodash";
+import { map, set } from "lodash";
 import { fn } from "@/utils";
 import { Label } from "@/components/Shared";
 import styles from "./GridGames.module.scss";
+import { useState } from "react";
+
+
 
 export function GridGames(props) {
   const { games } = props;
+  const [cart, setCart] = useState([]);
 
 
   const handleAddToCart = (game) => {
+    setCart([...cart, game]);
+        
+    console.log(cart);
+
     console.log(game);
   }
   return (

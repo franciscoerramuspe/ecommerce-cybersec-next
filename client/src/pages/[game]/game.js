@@ -1,32 +1,29 @@
-import { useState, useEffect } from "react"; // Import if state management or side effects are needed
 import { BasicLayout } from "@/layouts";
-import { Game as GameComponent } from "@/components/Game"; // Rename to avoid conflict with Game API
+import { Game } from "@/components/Game";
 import { Separator } from "@/components/Shared";
 
-export default function GamePage({ game }) { // Destructuring props
-  // If state management is required, add useState here
-  // const [state, setState] = useState(initialState);
-
-  // If you need to fetch data or perform side effects, use useEffect here
-  // useEffect(() => {
-  //   // Data fetching or side effects
-  // }, []);
-
+export default function GamePage(props) {
+  const { game } = props;
   const wallpaper = game.attributes.wallpaper;
 
   return (
     <>
+      {/* <Seo
+        title={game.attributes.title}
+        description={game.attributes.summary}
+      /> */}
+
       <BasicLayout>
-        <GameComponent.HeaderWallpaper image={wallpaper.data.attributes.url} />
-        <GameComponent.Panel gameId={game.id} game={game.attributes} />
+        <Game.HeaderWallpaper image={wallpaper.data.attributes.url} />
+        <Game.Panel gameId={game.id} game={game.attributes} />
 
         <Separator height={50} />
 
-        <GameComponent.Info game={game.attributes} />
+        <Game.Info game={game.attributes} />
 
         <Separator height={30} />
 
-        <GameComponent.Media
+        <Game.Media
           video={game.attributes.video}
           screenshots={game.attributes.screenshots.data}
         />

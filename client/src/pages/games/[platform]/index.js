@@ -1,16 +1,13 @@
 import { Platform, Game } from "@/api";
 
-
 export { default } from "./platform";
 
 export async function getServerSideProps(context) {
-//   const {
-//     params: { platform },
-//     query: { page = 1 },
-//   } = context;
-const {query, params } = context;
-const {page = 1} = query;
-const {platform} = params;
+  const {
+    params: { platform },
+    query: { page = 1 },
+  } = context;
+
   const platformCtrl = new Platform();
   const responsePlatform = await platformCtrl.getBySlug(platform);
 
@@ -19,12 +16,9 @@ const {platform} = params;
 
   return {
     props: {
-      platform: platform,
-      games: null,
-      pagination: null,
+      platform: responsePlatform,
+      games: responseGames.data,
+      pagination: responseGames.meta.pagination,
     },
   };
 }
-
-
-

@@ -1,29 +1,30 @@
+import { useEffect } from "react";
 import { Container } from "semantic-ui-react";
 import { size } from "lodash";
 import { BasicLayout } from "@/layouts";
 import {
   GridGames,
-  Separator,
   NoResult,
   Pagination,
-  Seo,
+  Separator,
 } from "@/components/Shared";
 
-export default function PlatformPage(props) {
-  const { games, platform, pagination } = props;
-  const hasProducts = size(games) > 0;
+export default function SearchPage(props) {
+  const { games, pagination, searchText } = props;
+  const hasResult = size(games) > 0;
+
+  useEffect(() => {
+    document.getElementById("search-games").focus();
+  }, []);
 
   return (
     <>
-      {/* <Seo title={`Juegos de ${platform.attributes.title}`} /> */}
-
-      <BasicLayout relative>
+      <BasicLayout relative isOpenSearch>
         <Container>
           <Separator height={50} />
 
-          <h2>{platform.attributes.title}</h2>
-
-          {hasProducts ? (
+          <h2>Searching: {searchText}</h2>
+          {hasResult ? (
             <>
               <GridGames games={games} />
               <Separator height={30} />
@@ -33,9 +34,7 @@ export default function PlatformPage(props) {
               />
             </>
           ) : (
-            <NoResult
-              text={`La categoria ${platform.attributes.title} aun no tiene productos`}
-            />
+            <NoResult text="No results found" />
           )}
 
           <Separator height={100} />
