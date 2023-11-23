@@ -1,4 +1,3 @@
-// AddToCart.js
 import classNames from "classnames";
 import styles from "./AddToCart.module.scss";
 
