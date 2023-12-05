@@ -13,7 +13,7 @@ This project is built with the following technologies
 * Cloud Integration (AWS)
     * S3: Storage of game info and IMGs
     * Lambda: custom processing
-    * MySQL DB hosted in AWS
+    * SQL Server DB hosted in AWS
 
 The project serves as an MVP of a Gaming E-Commerce, and there are many features that can still be built/improved.
 
