@@ -59,7 +59,7 @@ export class Cart {
 
   async paymentCart(token, products, idUser, address) {
     try {
-      const url = `${ENV.API_URL}/${ENV.ENDPOINTS.PAYMENY_ORDER}`;
+      const url = `${ENV.API_URL}${ENV.ENDPOINTS.PAYMENY_ORDER}`;
       const params = {
         method: "POST",
         headers: {

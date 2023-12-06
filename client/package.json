@@ -21,6 +21,8 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-player": "^2.13.0",
+    "react-slick": "^0.29.0",
     "sass": "^1.68.0",
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.4",

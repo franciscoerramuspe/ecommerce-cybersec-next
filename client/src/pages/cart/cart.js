@@ -14,26 +14,28 @@ export default function CartPage() {
   } = useRouter();
   const currentStep = Number(step);
   const [games, setGames] = useState(null);
-//   const { cart } = useCart();
+  
+  // const { cart } = useCart();
+  // console.log(cart);
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const data = [];
-        for await (const item of cart) {
-          const response = await gameCtrl.getGameById(item.id);
-          data.push({ ...response.data, quantity: item.quantity });
-        }
-        setGames(data);
-      } catch (error) {
-        console.error(error);
-      }
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async () => {
+  //     try {
+  //       const data = [];
+  //       for await (const item of cart) {
+  //         const response = await gameCtrl.getGameById(item.id);
+  //         data.push({ ...response.data, quantity: item.quantity });
+  //       }
+  //       setGames(data);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   })();
+  // }, [cart]);
 
   return (
     <>
-      {/* <Seo title="cart" /> */}
+      {/* <Seo title="Carrito" /> */}
 
       <CartLayout>
         {currentStep === 1 && <Cart.StepOne games={games} />}

@@ -9,8 +9,13 @@
 .imgContiner {
   width: 50%;
   padding-right: 12px;
+  height: auto; // This will make the container adjust to the image height
+  overflow: hidden; // If you want to clip the image to the container size
 
   > img {
+    width: 100%; // Make the image take up the whole container width
+    height: auto; // Maintain aspect ratio
+    object-fit: cover; // This will cover the area of the container without stretching the image
     border-radius: 15px;
   }
 }

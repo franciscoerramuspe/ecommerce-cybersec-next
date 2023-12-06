@@ -13,7 +13,7 @@ export function Info(props) {
       <div className={styles.more}>
         <ul>
           <li>
-            <span>Fecha de lanzamiento:</span> {game.releaseDate}
+            <span>Release Date:</span> {game.releaseDate}
           </li>
         </ul>
       </div>

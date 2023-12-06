@@ -10,8 +10,13 @@ import {
 } from "@/components/Shared";
 
 export default function PlatformPage(props) {
+
   const { games, platform, pagination } = props;
+  console.log(games);
+  console.log(platform);
+  console.log(pagination);
   const hasProducts = size(games) > 0;
+  console.log(hasProducts);
 
   return (
     <>
@@ -27,14 +32,14 @@ export default function PlatformPage(props) {
             <>
               <GridGames games={games} />
               <Separator height={30} />
-              <Pagination
+              {/* <Pagination
                 currentPage={pagination.page}
                 totalPages={pagination.pageCount}
-              />
+              /> */}
             </>
           ) : (
             <NoResult
-              text={`La categoria ${platform.attributes.title} aun no tiene productos`}
+              text={`The Category ${platform.attributes.title} has no games yet`}
             />
           )}
 
