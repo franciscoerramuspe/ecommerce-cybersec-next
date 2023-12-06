@@ -11,6 +11,7 @@ import {
 
 export default function SearchPage(props) {
   const { games, pagination, searchText } = props;
+  console.log(games);
   const hasResult = size(games) > 0;
 
   useEffect(() => {
@@ -28,10 +29,10 @@ export default function SearchPage(props) {
             <>
               <GridGames games={games} />
               <Separator height={30} />
-              <Pagination
+              {/* <Pagination
                 currentPage={pagination.page}
                 totalPages={pagination.pageCount}
-              />
+              /> */}
             </>
           ) : (
             <NoResult text="No results found" />
