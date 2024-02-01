@@ -1,6 +1,6 @@
 # Gaming E-Commerce - Final Project for SE 610
 
-This project was created by: **Francisco Erramuspe**, **Masford Boima**, and **Kiran Ramjisingh**
+This project was created by: **Francisco Erramuspe**, **Masfort Boima**, and **Kiran Ramjisingh**
 
 This project is built with the following technologies
 * FrontEnd
